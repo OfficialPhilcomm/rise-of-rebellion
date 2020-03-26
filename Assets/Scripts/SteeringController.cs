@@ -28,7 +28,7 @@ public class SteeringController : MonoBehaviour
         float diff = targetSteer - steer;
         steer += diff * 0.002f;
 
-        if(diff < 0.02f)
+        if(Math.Abs(diff) < 0.02f)
         {
             steer = targetSteer;
         }

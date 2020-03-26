@@ -21,7 +21,7 @@ public class ThrustController : MonoBehaviour
         float diff = targetSpeed - speed;
         speed += diff * 0.002f;
 
-        if (diff < 0.02f)
+        if (Math.Abs(diff) < 0.02f)
         {
             speed = targetSpeed;
         }
