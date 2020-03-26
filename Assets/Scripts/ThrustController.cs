@@ -8,42 +8,35 @@ public class ThrustController : MonoBehaviour
     public static readonly int THRUST_NONE = 0;
     public static readonly int THRUST_FULL = 1;
 
-    public float maxThrust = 10f;
-    private float thrust = 0f;
-    private float targetThrust = 0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float maxSpeed = 10f;
+    [SerializeField]
+    private float speed = 0f;
+    private float targetSpeed = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.rotation.y);
-        Vector3 moveVector = new Vector3(0, 0, 0);
-        /*transform.Rotate(0, steer * Time.deltaTime, 0);
+        transform.position += transform.forward * speed * Time.deltaTime;
 
-        float diff = targetSteer - steer;
-        steer += diff * 0.002f;
+        float diff = targetSpeed - speed;
+        speed += diff * 0.002f;
 
         if (diff < 0.02f)
         {
-            steer = targetSteer;
-        }*/
+            speed = targetSpeed;
+        }
     }
 
     public void Thrust(int thrustPower)
 	{
         if(thrustPower == THRUST_NONE)
 		{
-            targetThrust = 0f;
+            targetSpeed = 0f;
             return;
 		}
         if(thrustPower == THRUST_FULL)
 		{
-            targetThrust = maxThrust;
+            targetSpeed = maxSpeed;
             return;
 		}
         throw new NotImplementedException("Thrust power not known");

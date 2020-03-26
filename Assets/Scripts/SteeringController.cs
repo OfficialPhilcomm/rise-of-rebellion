@@ -10,6 +10,7 @@ public class SteeringController : MonoBehaviour
     public static readonly int STEER_RIGHT = 2;
 
     public float maxSteering = 1f;
+    [SerializeField]
     private float steer = 0f;
     private float targetSteer = 0f;
 
