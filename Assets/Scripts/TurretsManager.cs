@@ -7,7 +7,7 @@ public class TurretsManager : MonoBehaviour
     public TurretData turretData;
     public GameObject turretPrefab;
 
-    private Transform target = null;
+    public Transform target = null;
 
     private List<GameObject> turrets = new List<GameObject>();
 
@@ -20,7 +20,10 @@ public class TurretsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (target != null)
+        {
+            Debug.DrawRay(transform.position, target.position, Color.green);
+        }
     }
 
     private void InitializeTurrets()
