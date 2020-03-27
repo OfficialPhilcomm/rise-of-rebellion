@@ -399,3 +399,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   speed: 0
+--- !u!114 &1254648687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254648684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33b550e6ad33c49f7b05fe479123a175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretData: {fileID: 11400000, guid: 7881d716d65994c7fac01464d64b7c97, type: 2}
+  turretPrefab: {fileID: 7302049210198445668, guid: f5047da7676ab4bdfb0320f52b3efa2b,
+    type: 3}
