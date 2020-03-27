@@ -15,15 +15,13 @@ public class TurretsManager : MonoBehaviour
     void Start()
     {
         InitializeTurrets();
+        SetTarget(target);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target != null)
-        {
-            Debug.DrawRay(transform.position, target.position, Color.green);
-        }
+        
     }
 
     private void InitializeTurrets()
@@ -43,6 +41,7 @@ public class TurretsManager : MonoBehaviour
         foreach (GameObject turret in turrets)
         {
             // set target of every turret individually
+            turret.GetComponent<TurretController>().SetTarget(target);
         }
     }
 }
