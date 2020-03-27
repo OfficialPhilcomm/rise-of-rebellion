@@ -26,7 +26,7 @@ public class SteeringController : MonoBehaviour
         transform.Rotate(0, steer * Time.deltaTime, 0);
 
         float diff = targetSteer - steer;
-        steer += diff * 0.002f;
+        steer += diff * 0.015f;
 
         if(Math.Abs(diff) < 0.02f)
         {
