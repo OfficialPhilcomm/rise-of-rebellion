@@ -27,7 +27,7 @@ public class TurretsManager : MonoBehaviour
     {
         foreach (Vector3 position in turretData.positions)
         {
-            GameObject turret = Instantiate(turretPrefab, position, Quaternion.identity);
+            GameObject turret = Instantiate(turretPrefab, transform.position + position, Quaternion.identity);
             turret.transform.parent = gameObject.transform;
             turrets.Add(turret);
         }
