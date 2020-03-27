@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Turret Data")]
 public class TurretData : ScriptableObject
 {
-    public List<Transform> positions;
+    public List<Vector3> positions;
 }
