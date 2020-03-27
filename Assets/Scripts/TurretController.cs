@@ -9,6 +9,10 @@ public class TurretController : MonoBehaviour
 
     private Transform target;
 
+    private float cooldown = 0f;
+    private float cooldownMax = 2f;
+
+
     void Start()
     {
 
@@ -21,6 +25,23 @@ public class TurretController : MonoBehaviour
         {
             Debug.DrawRay(transform.position, target.position - transform.position, Color.green);
             Debug.Log(target.position);
+        }
+        if(cooldown > 0f)
+        {
+            cooldown -= Time.deltaTime;
+            if(cooldown < 0)
+            {
+                cooldown = 0;
+            }
+        } else
+        {
+            //shoot
+            if(target != null)
+            {
+                Quaternion rotation = Quaternion.LookRotation(target.position - transform.position);
+                Instantiate(laserPrefab, transform.position, rotation);
+                cooldown = cooldownMax;
+            }
         }
     }
 

@@ -17,7 +17,7 @@ public class SteeringController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Steer(STEER_RIGHT);
+        //Steer(STEER_RIGHT);
     }
 
     // Update is called once per frame
