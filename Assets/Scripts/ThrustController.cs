@@ -19,7 +19,7 @@ public class ThrustController : MonoBehaviour
         transform.position += transform.forward * speed * Time.deltaTime;
 
         float diff = targetSpeed - speed;
-        speed += diff * 0.002f;
+        speed += diff * 0.007f;
 
         if (Math.Abs(diff) < 0.02f)
         {
