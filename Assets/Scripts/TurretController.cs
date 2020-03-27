@@ -5,6 +5,8 @@ using System.Collections.Generic;
 [RequireComponent(typeof(CannonController))]
 public class TurretController : MonoBehaviour
 {
+    public GameObject laserPrefab;
+
     private Transform target;
 
     void Start()
